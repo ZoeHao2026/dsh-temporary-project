@@ -1,0 +1,62 @@
+{
+  "name": "@local/dsh-temporary-project",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Temporary conversation option for the DeepSeek Harness Web GUI: one click creates a dedicated temporary project directory and starts an agent session without choosing a folder.",
+  "author": "ZoeHao2026",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZoeHao2026/dsh-temporary-project.git"
+  },
+  "homepage": "https://github.com/ZoeHao2026/dsh-temporary-project#readme",
+  "bugs": {
+    "url": "https://github.com/ZoeHao2026/dsh-temporary-project/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "temporary-project",
+    "web-ui"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./route": "./route.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "route.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "validate": "node scripts/validate-bundle.mjs",
+    "test": "node tests/host-route.test.mjs",
+    "check": "node --check route.js && node --check client.js && node --check index.js && npm run validate && npm test"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

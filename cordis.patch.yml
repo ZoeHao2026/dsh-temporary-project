@@ -1,0 +1,7 @@
+# Temporary Project bundle: one Host row. The browser half is declared by the
+# package.json `dsh.client` section and served through the client module table.
+# The Host row names its file relatively so the Loader imports this exact
+# module URL and a corrected Host half is picked up by a recomposition.
+- insert:
+    - id: temporary-project
+      name: './route.js'

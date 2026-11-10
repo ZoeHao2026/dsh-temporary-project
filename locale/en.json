@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Temporary project",
+    "description": "Adds a Temporary conversation option to New Session that creates a dedicated temporary project directory and starts an agent session there, without choosing a project folder."
+  }
+}

@@ -1,0 +1,40 @@
+name: Verify plugin
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check sources, manifest, and route behavior
+        run: npm run check
+      - name: Confirm the package tarball carries runtime files
+        shell: bash
+        run: |
+          npm pack --pack-destination "$RUNNER_TEMP"
+          tar -tzf "$RUNNER_TEMP"/*.tgz > "$RUNNER_TEMP/package-contents.txt"
+          for required in \
+            package/package.json \
+            package/index.js \
+            package/route.js \
+            package/client.js \
+            package/cordis.patch.yml \
+            package/locale/en.json \
+            package/locale/zh.json \
+            package/icon.svg \
+            package/README.md \
+            package/LICENSE; do
+            if ! grep -Fxq "$required" "$RUNNER_TEMP/package-contents.txt"; then
+              echo "::error::Missing $required from package tarball"
+              exit 1
+            fi
+          done

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Temporary project">
+  <rect width="64" height="64" rx="14" fill="#1f6feb"/>
+  <path d="M14 22.5c0-1.38 1.12-2.5 2.5-2.5h9.6c.66 0 1.29.26 1.75.73L32 24h15.5c1.38 0 2.5 1.12 2.5 2.5v18c0 1.38-1.12 2.5-2.5 2.5h-31A2.5 2.5 0 0 1 14 44.5z" fill="#ffffff" opacity="0.95"/>
+  <path d="M14 29h36v15.5c0 1.38-1.12 2.5-2.5 2.5h-31A2.5 2.5 0 0 1 14 44.5z" fill="#cfe2ff"/>
+  <path d="M48 12.5l1.55 4.05 4.05 1.55-4.05 1.55L48 23.7l-1.55-4.05-4.05-1.55 4.05-1.55z" fill="#ffd166"/>
+</svg>
