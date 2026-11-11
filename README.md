@@ -4,6 +4,7 @@
   <p>在 DeepSeek Harness 的新建会话里一键开启临时项目，无需选择项目目录。</p>
   <p>
     <a href="https://github.com/ZoeHao2026/dsh-temporary-project/actions/workflows/verify.yml"><img src="https://github.com/ZoeHao2026/dsh-temporary-project/actions/workflows/verify.yml/badge.svg" alt="Verify plugin"></a>
+    <a href="https://github.com/ZoeHao2026/dsh-temporary-project/releases"><img src="https://img.shields.io/github/v/release/ZoeHao2026/dsh-temporary-project?label=release" alt="Latest release"></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
   </p>
   <p><a href="#中文">中文</a> · <a href="#english">English</a></p>
